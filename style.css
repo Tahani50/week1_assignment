@@ -1,0 +1,49 @@
+header a{
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #36B98C;
+}
+
+
+
+main{
+    padding: 0 60px;
+}
+
+.logo{
+    padding: 30px 0;
+}
+
+
+input, select{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label{
+    color: gray;
+    padding: 10px 0;
+}
+
+button{
+    color: white;
+    background-color: #36B98C;
+    width: 15%;
+    padding: 8px;
+    border: none;
+}
+
+footer p{
+    text-align: center;
+    color: #36B98C;
+    margin: 20px;
+    font-weight: 450;
+}
+
+#gap{
+    height: 50px;
+}
