@@ -5,7 +5,6 @@ export class Form {
     constructor() {
         this.form = document.createElement("form");
         this.form.innerHTML = `
-            <form>
            <h4 class="mb-4">Organization Information</h4>
                 <hr class="mb-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -25,11 +24,11 @@ export class Form {
                         <label for="businessType">Business Type</label>
                         <select id="businessType" name="businessType"
                             class="focus:outline-none focus:ring-2 focus:ring-gray-500 p-2">
-                            <option value="">Select Type</option>
-                            <option value="sole">Sole Proprietorship</option>
-                            <option value="partnership">Partnership</option>
-                            <option value="llc">Limited Liability Company (LLC)</option>
-                            <option value="corporation">Corporation</option>
+                            <option value="">Select Business Type</option>
+                            <option value="retail">Retail</option>
+                            <option value="service">Service</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="technology">Technology</option>                        
                         </select>
                         <span id="businessTypeError" class="error text-red-500 text-xs"></span>
                     </div>
@@ -93,9 +92,9 @@ export class Form {
                 </div>
                 <hr>
                 <div class="flex justify-end" id="buttonDiv">
-                    <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-md mr-3">Submit</button>
+                    <button type="submit" id="btn">Submit</button>
                 </div>
-                 </form>
+            </div>  
         `;
 
         this.form.addEventListener("submit", this.handleSubmission.bind(this));
@@ -185,10 +184,10 @@ export class Form {
                     fetchData.appendChild(fetchButt);
                     console.log(`Success: ${result.message}`);
                 } else {
-                    throw new Error('Something went wrong');
+                    throw new Error('Network response was not ok');
                 }
             } catch (error) {
-                console.log(`Error: ${error.message}`);
+                console.log(`Registration failed: ${error.message}`);
             }
         }
 
@@ -212,3 +211,10 @@ export class Form {
         parent.appendChild(this.form);
     }
 }
+
+
+
+const darkModeBtn = document.getElementById('darkModeBtn');
+    darkModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('bg-gray-900');
+  });

@@ -1,13 +1,11 @@
 header a{
-    color: black;
+    color: gray;
     text-decoration: none;
 }
 
 header a:hover{
     color: #36B98C;
 }
-
-
 
 main{
     padding: 0 60px;
@@ -29,13 +27,6 @@ label{
     padding: 10px 0;
 }
 
-button{
-    color: white;
-    background-color: #36B98C;
-    width: 15%;
-    padding: 8px;
-    border: none;
-}
 
 footer p{
     text-align: center;
@@ -46,4 +37,24 @@ footer p{
 
 #gap{
     height: 50px;
+}
+
+
+.custom-button, #btn{
+    cursor: pointer;
+    margin: 0.5rem;
+    color: white;
+    background-color: #36B98C;
+    width: 15%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+#darkModeBtn:hover{
+    background-color: #36B98C;
+}
+
+#darkModeBtn{
+    background-color: gray;
 }
